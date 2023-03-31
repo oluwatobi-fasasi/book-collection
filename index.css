@@ -43,6 +43,7 @@ nav li{
 
 .list{
     margin-bottom: 2rem;
+    height: auto;
 }
 
 .list h1{
