@@ -65,10 +65,38 @@ nav li{
     gap: 0.5rem;
 }
 
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+}
 .home input
 .contact input{
     height: 1.3rem;
 }
+
+.contact h1{
+    text-align: center;
+}
+
+.title,
+.author{
+    padding-bottom: 1.4rem;
+    margin-left: 2rem;
+    color: #681914;
+}
+
+.removeBtn{
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    padding: 0.3rem;
+    background-color: #dcc960;
+    color: #681914;
+    border: none;
+    font-weight: 700;
+}
+
 footer{
     background-color: #00690d;
     padding: 2rem;
@@ -76,7 +104,42 @@ footer{
     text-align: center;
     font-size: 1.2rem;
 }
-.home,
-.list{
+
+.list,
+.contact{
     display: none;
 }
+
+
+@media screen and (min-width: 768px) {
+   
+    .contact-form{
+        display: flex;
+        flex-direction: column;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        gap: 1rem;
+    }
+
+    .submitBtn{
+        padding: 0.5rem;
+        font-size: 1rem;
+       }
+  }
+
+  @media screen and (min-width: 1024px) {
+   
+   .submitBtn{
+    padding: 1rem;
+    font-size: 1.5rem;
+   }
+
+   .home input{
+    height: 1.5rem;
+    width: 15rem;
+   }
+
+   .addBtn{
+    padding: 0.4rem;
+   }
+  }
