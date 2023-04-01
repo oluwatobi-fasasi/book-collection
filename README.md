@@ -1,9 +1,9 @@
-# Mobile-project
+# Project
+
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
@@ -23,25 +23,17 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Hello Microverse <a name="about-project"></a>
+# 📖 Book Collection <a name="about-project"></a>
 
-> My project is a simple portfolio setup.
-
-**Mobile project setup** is a project 
+> This project is a book collection app designed without frameworks, just JavaScript. It allows users to add book author and book title names to the book list.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
-
-
-<details>
-  <summary>Client</summary>
   <ul>
     <li>html</li>
     <li>css</li>
     <li>javascript</li>
   </ul>
-</details>
 
 <!-- Features -->
 
@@ -49,12 +41,12 @@
 
 - **impressive UI**
 - **user friendly**
-- **great UX**
+- **User can add and remove author name and title**
 
 <!-- live Demo -->
 ### Live Demo <a name="live-demo"></a>
 
-[visit here](https://oluwatobi-fasasi.github.io/portfolio-new/)
+[visit here](https://oluwatobi-fasasi.github.io/book-collection/)
 
 
 
@@ -86,7 +78,7 @@ Clone this repository to your desired folder:
 Example commands:
 
 ```sh
-  git clone https://github.com/oluwatobi-fasasi/my-portfolio-website
+  git clone https://github.com/oluwatobi-fasasi/book-collection
 ```
 
 
@@ -161,7 +153,6 @@ No deployments required
 - [ ] **add linters for different languages**
 - [ ] **create more flexible CSS**
 
--[] **create more grid
 
 
 <!-- CONTRIBUTING -->
