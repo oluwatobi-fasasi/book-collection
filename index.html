@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book_Collection</title>
     <link rel="stylesheet" href="index.css">
-    
-    <script src="index.js" defer></script>
 </head>
 <body>
     <main>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Book List</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="" id="home-link" clas>Home</a></li>
+                <li><a href="#" id="list-link">Book List</a></li>
+                <li><a href="#" id="contact-link">Contact</a></li>
             </ul>
         </nav>
         <section id="home" class="home">
@@ -23,141 +21,24 @@
             <form action="" id="home-form" class="home-form">
                 <input type="text" id="book-author" required placeholder="Author">
                 <input type="text" id="book-title" required placeholder="Title">
-                <button type="submit" id="addBtn">Add</button>
+                <button type="submit" id="addBtn" class="addBtn">Add</button>
             </form>
         </section>
         <section id="list" class="list">
             <h1>Book List</h1>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <!-- <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div><div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div>
-            <div class="book-card">
-                <p>Title: In Search of Lost Time</p>
-                <p>Author: Marcel Proust</p>
-                <button>Remove</button>
-                <hr>
-            </div> -->
+            <div class="book-card" id="book-card"></div>
         </section>
         <section id="contact" class="contact">
             <h1>Contact Us</h1>
-            <form action="" id="contact-form" class="home-form">
+            <form action="" id="contact-form" class="contact-form">
                 <input type="text" name="name" class="name" placeholder="Your Name Here...." required>
                 <input type="text" name="email" class="email" placeholder="Your Email Address" required>
                 <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Your Message Here...." required></textarea>
-                <button type="submit" id="submitBtn">Send</button>
+                <button type="submit" id="submitBtn" class="submitBtn">Send</button>
             </form>
         </section>
         <footer>Originally designed by me.</footer>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>
