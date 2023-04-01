@@ -1,31 +1,37 @@
-class BookHub{
-    constructor(){
+class BookHub {
+    constructor() {
         this.bookHub = JSON.parse(localStorage.getItem('bookHub')) || [];
         this.form = document.getElementById('home-form');
-        this.inputTitle =document.getElementById('book-title');
+        this.inputTitle = document.getElementById('book-title');
         this.inputAuthor = document.getElementById('book-author');
         this.bookCard = document.getElementById('book-card');
+        this.listLink = document.getElementById('list-link');
+        this.homeLink = document.getElementById('home-link');
+        this.contactLink = document.getElementById('contact-link');
+        this.listPage = document.querySelector('.list');
+        this.homePage = document.querySelector('.home');
+        this.contactPage = document.querySelector('.contact');
         this.bookDisplay();
-      
+
     }
 
-    addBook(author, title){
-        this.bookHub.push({author, title});
+    addBook(author, title) {
+        this.bookHub.push({ author, title });
         localStorage.setItem('bookHub', JSON.stringify(this.bookHub))
     }
 
-    removeBook(author, title){
-        this.bookHub = this.bookHub.filter((book)=>{
+    removeBook(author, title) {
+        this.bookHub = this.bookHub.filter((book) => {
             !(book.title === title && book.author === author)
         });
         localStorage.setItem('bookHub', JSON.stringify(this.bookHub));
     }
 
 
-    bookDisplay =()=>{
-        this.bookCard.innerHTML ='';
+    bookDisplay = () => {
+        this.bookCard.innerHTML = '';
 
-        for(let i =0; i < this.bookHub.length; i++){
+        for (let i = 0; i < this.bookHub.length; i++) {
             const book = this.bookHub[i];
             const eachBookDiv = document.createElement('div');
             const author = document.createElement('p');
@@ -47,52 +53,56 @@ class BookHub{
             this.bookCard.appendChild(eachBookDiv);
 
 
-            removeBtn.addEventListener('click', ()=>{
+            removeBtn.addEventListener('click', () => {
                 this.removeBook(book.author, book.title);
                 this.bookDisplay();
             })
         }
     }
 
-    toggle(){
-            this.listLink.addEventListener('click', ()=>{
-            this.listPage.style.display = 'block';
-            this.homePage.style.display = 'none';
-            this.contactPage.style.display = 'none';
-        })
-    }
-    init(){
-        this.form.addEventListener('submit', (e)=>{
+    init() {
+        this.form.addEventListener('submit', (e) => {
             e.preventDefault();
             this.addBook(this.inputAuthor.value.trim(''), this.inputTitle.value.trim(''));
             this.bookDisplay();
             this.form.reset();
         });
-        
+
+        this.listLink.addEventListener('click', () => {
+            this.listPage.style.display = 'block';
+            this.homePage.style.display = 'none';
+            this.contactPage.style.display = 'none';
+        });
+
+        this.homeLink.addEventListener('click', () => {
+            this.listPage.style.display = 'none';
+            this.homePage.style.display = 'block';
+            this.contactPage.style.display = 'none';
+        });
+
+        this.contactLink.addEventListener('click', () => {
+            this.listPage.style.display = 'none';
+            this.homePage.style.display = 'none';
+            this.contactPage.style.display = 'block';
+        });
+
     }
 }
 
 const newBook = new BookHub();
 newBook.init();
 
-listLink =document.getElementById('list-link');
-homeLink = document.getElementById('home-link');
-contactLink = document.getElementById('contact-link');
-listPage =document.querySelector('.list');
-homePage = document.querySelector('.home');
-contactPage = document.querySelector('.contact');
 
-listLink.addEventListener('click',()=>{
-    listPage.style.display = 'block'
-    homePage.style.display = 'none'
-    contactPage.style.display = 'none'});
+const form = document.querySelector('contact-form');
+const showError = document.getElementById('show-error');
 
-    homeLink.addEventListener('click',()=>{
-        listPage.style.display = 'none'
-        homePage.style.display = 'block'
-        contactPage.style.display = 'none'});
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 
-    contactLink.addEventListener('click',()=>{
-        listPage.style.display = 'none'
-        homePage.style.display = 'none'
-        contactPage.style.display = 'block'});
+  if (document.querySelector('.email').value.match(/[A-Z]/)) {
+    showError.innerHTML = 'Please enter a valid email in lowercase';
+    showError.style.display = 'block';
+  } else {
+    form.submit();
+  }
+});
